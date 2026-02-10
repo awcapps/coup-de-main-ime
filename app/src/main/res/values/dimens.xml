@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Phone - Tailles par défaut -->
+    <dimen name="keyboard_button_text_size">14sp</dimen>
+    <dimen name="keyboard_preview_text_size">14sp</dimen>
+    <dimen name="keyboard_preview_height">24dp</dimen>
+    <dimen name="keyboard_padding">1dp</dimen>
+    <dimen name="keyboard_row_margin">1dp</dimen>
+    
+    <!-- Boutons onboarding -->
+    <dimen name="button_margin_horizontal">24dp</dimen>
+    <dimen name="button_margin_small">8dp</dimen>
+</resources>

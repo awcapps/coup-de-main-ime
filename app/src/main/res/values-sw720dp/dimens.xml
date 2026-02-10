@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tablettes 10"+ - Encore plus d'espace -->
+    <dimen name="keyboard_button_text_size">20sp</dimen>
+    <dimen name="keyboard_preview_text_size">18sp</dimen>
+    <dimen name="keyboard_preview_height">32dp</dimen>
+    <dimen name="keyboard_padding">3dp</dimen>
+    <dimen name="keyboard_row_margin">3dp</dimen>
+</resources>

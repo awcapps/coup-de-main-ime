@@ -1,0 +1,94 @@
+name: Bug Report
+description: Reporter un bug dans Coup de Main
+title: "[BUG] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de reporter ce bug ! 🐛
+        
+  - type: textarea
+    id: description
+    attributes:
+      label: Description du Bug
+      description: Une description claire et concise du problème
+      placeholder: Quand je fais X, l'app crash/ne fonctionne pas comme prévu...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes pour Reproduire
+      description: Comment reproduire le bug ?
+      placeholder: |
+        1. Ouvrir l'app
+        2. Aller dans '...'
+        3. Cliquer sur '...'
+        4. Observer l'erreur
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportement Attendu
+      description: Qu'est-ce qui devrait se passer ?
+      placeholder: L'app devrait...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportement Actuel
+      description: Qu'est-ce qui se passe réellement ?
+      placeholder: Au lieu de ça, l'app...
+    validations:
+      required: true
+      
+  - type: input
+    id: version
+    attributes:
+      label: Version de l'App
+      description: Quelle version de Coup de Main utilisez-vous ?
+      placeholder: "Ex: 0.2.0"
+    validations:
+      required: true
+      
+  - type: input
+    id: android-version
+    attributes:
+      label: Version Android
+      description: Quelle version d'Android ?
+      placeholder: "Ex: Android 13"
+    validations:
+      required: true
+      
+  - type: input
+    id: device
+    attributes:
+      label: Appareil
+      description: Sur quel appareil ?
+      placeholder: "Ex: Samsung Galaxy S21, Pixel 7, Émulateur Android Studio"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots
+      description: Si possible, ajouter des logs (logcat) ou des screenshots
+      placeholder: Coller les logs ou glisser des screenshots ici
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional
+    attributes:
+      label: Informations Additionnelles
+      description: Tout autre détail utile
+      placeholder: Ça arrive seulement quand..., ça marche bien sur..., etc.
+    validations:
+      required: false

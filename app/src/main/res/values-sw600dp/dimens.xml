@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tablettes 7" - Plus d'espace pour les boutons -->
+    <dimen name="keyboard_button_text_size">18sp</dimen>
+    <dimen name="keyboard_preview_text_size">16sp</dimen>
+    <dimen name="keyboard_preview_height">28dp</dimen>
+    <dimen name="keyboard_padding">2dp</dimen>
+    <dimen name="keyboard_row_margin">2dp</dimen>
+</resources>

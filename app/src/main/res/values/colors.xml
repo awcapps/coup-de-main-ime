@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mode Clair (Clarté & Sérénité) -->
+    <color name="background_primary">#F5F7FA</color>
+    <color name="color_primary">#3F51B5</color>
+    <color name="color_secondary">#4CAF50</color>
+    <color name="text_primary">#263238</color>
+    <color name="surface_color">#FFFFFF</color>
+    
+    <!-- Icône launcher -->
+    <color name="ic_launcher_background">#F1F3FB</color>
+    
+    <!-- Couleurs clavier IME - Mode Sombre -->
+    <color name="keyboard_background_dark">#1E1E1E</color>
+    <color name="keyboard_button_background_dark">#2C2C2C</color>
+    <color name="keyboard_button_text_dark">#E1E1E1</color>
+    <color name="keyboard_preview_background_dark">#2C2C2C</color>
+    <color name="keyboard_preview_text_dark">#9FA8DA</color>
+    
+    <!-- Couleurs clavier IME - Mode Clair -->
+    <color name="keyboard_background_light">#F5F7FA</color>
+    <color name="keyboard_button_background_light">#FFFFFF</color>
+    <color name="keyboard_button_text_light">#263238</color>
+    <color name="keyboard_preview_background_light">#FFFFFF</color>
+    <color name="keyboard_preview_text_light">#3F51B5</color>
+    
+    <!-- Anciennes couleurs (compatibilité) -->
+    <color name="background_dark">#F5F7FA</color>
+    <color name="card_dark">#FFFFFF</color>
+    <color name="accent_blue">#3F51B5</color>
+    <color name="text_secondary">#757575</color>
+    <color name="background_light">#F5F7FA</color>
+    <color name="card_light">#FFFFFF</color>
+    <color name="text_primary_light">#263238</color>
+    
+    <!-- Couleurs système Material -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

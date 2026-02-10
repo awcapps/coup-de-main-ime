@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Catégorie: Apparence -->
+    <PreferenceCategory
+        android:title="Apparence"
+        android:key="category_appearance">
+
+        <ListPreference
+            android:key="button_size"
+            android:title="Taille des boutons"
+            android:summary="Ajuster la taille pour plus de confort"
+            android:entries="@array/button_size_entries"
+            android:entryValues="@array/button_size_values"
+            android:defaultValue="LARGE"
+            android:icon="@android:drawable/ic_menu_view" />
+
+        <ListPreference
+            android:key="layout_mode"
+            android:title="Disposition"
+            android:summary="Organisation des touches du clavier"
+            android:entries="@array/layout_entries"
+            android:entryValues="@array/layout_values"
+            android:defaultValue="DEFAULT"
+            android:icon="@android:drawable/ic_menu_view" />
+
+        <ListPreference
+            android:key="color_scheme"
+            android:title="Couleurs"
+            android:summary="Thème du clavier"
+            android:entries="@array/color_entries"
+            android:entryValues="@array/color_values"
+            android:defaultValue="SYSTEM"
+            android:icon="@android:drawable/ic_menu_day" />
+
+        <Preference
+            android:key="preview_keyboard"
+            android:title="Aperçu du clavier"
+            android:summary="Voir le clavier avec vos paramètres actuels"
+            android:icon="@android:drawable/ic_menu_view">
+            <intent
+                android:targetPackage="bkh.apps.coupdemain"
+                android:targetClass="bkh.apps.coupdemain.ui.settings.LayoutPreviewActivity" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <!-- Catégorie: Retour haptique et sonore -->
+    <PreferenceCategory
+        android:title="Retour tactile et sonore"
+        android:key="category_feedback">
+
+        <SwitchPreferenceCompat
+            android:key="enable_vibration"
+            android:title="Vibration"
+            android:summary="Vibrer à chaque touche"
+            android:defaultValue="true"
+            android:icon="@android:drawable/ic_menu_rotate" />
+
+        <SeekBarPreference
+            android:key="vibration_duration"
+            android:title="Durée de vibration"
+            android:summary="En millisecondes (10-100)"
+            android:defaultValue="30"
+            android:dependency="enable_vibration"
+            android:min="10"
+            android:max="100"
+            android:icon="@android:drawable/ic_menu_info_details" />
+
+        <SwitchPreferenceCompat
+            android:key="enable_sound"
+            android:title="Son"
+            android:summary="Émettre un son à chaque touche"
+            android:defaultValue="false"
+            android:icon="@android:drawable/ic_lock_silent_mode" />
+
+    </PreferenceCategory>
+
+    <!-- Catégorie: Avancé -->
+    <PreferenceCategory
+        android:title="Avancé"
+        android:key="category_advanced">
+
+        <ListPreference
+            android:key="theme_preference"
+            android:title="Thème de l'application"
+            android:summary="Personnaliser l'apparence de l'application"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values"
+            android:defaultValue="system"
+            android:icon="@android:drawable/ic_menu_day" />
+
+        <Preference
+            android:key="relaunch_onboarding"
+            android:title="Revoir l'onboarding"
+            android:summary="Afficher à nouveau l'écran d'accueil"
+            android:icon="@android:drawable/ic_menu_info_details" />
+
+        <Preference
+            android:key="reset_preferences"
+            android:title="Réinitialiser les paramètres"
+            android:summary="Restaurer les valeurs par défaut"
+            android:icon="@android:drawable/ic_menu_revert" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

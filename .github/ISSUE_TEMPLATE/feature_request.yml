@@ -1,0 +1,74 @@
+name: Feature Request
+description: Proposer une nouvelle fonctionnalité
+title: "[FEATURE] "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de proposer une amélioration pour Coup de Main ! 💡
+        
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème / Besoin
+      description: Quel problème cette feature résout-elle ?
+      placeholder: Je voudrais pouvoir... parce que...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution Proposée
+      description: Comment imaginez-vous cette fonctionnalité ?
+      placeholder: L'app pourrait avoir un bouton qui..., ou bien...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considérées
+      description: Y a-t-il d'autres façons de faire ?
+      placeholder: J'ai pensé à..., mais...
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priorité
+      description: À quel point cette feature est importante pour vous ?
+      options:
+        - Nice to have
+        - Utile
+        - Important
+        - Critique
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: accessibility
+    attributes:
+      label: Accessibilité
+      description: Cette feature aide-t-elle l'accessibilité ?
+      options:
+        - label: Oui, cette feature améliore l'accessibilité pour les utilisateurs avec difficultés motrices
+          
+  - type: textarea
+    id: mockup
+    attributes:
+      label: Mockup / Sketches
+      description: Si vous avez des maquettes ou dessins, ajoutez-les ici
+      placeholder: Glisser des images ici...
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional
+    attributes:
+      label: Informations Additionnelles
+      description: Tout autre contexte utile
+    validations:
+      required: false

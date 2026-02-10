@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mode Sombre (Confort & Focus) -->
+    <color name="background_primary">#121212</color>
+    <color name="color_primary">#9FA8DA</color>
+    <color name="color_secondary">#FFC107</color>
+    <color name="text_primary">#E1E1E1</color>
+    <color name="surface_color">#1E1E1E</color>
+    
+    <!-- Couleurs clavier IME - Mode Sombre -->
+    <color name="keyboard_background_dark">#1E1E1E</color>
+    <color name="keyboard_button_background_dark">#2C2C2C</color>
+    <color name="keyboard_button_text_dark">#E1E1E1</color>
+    <color name="keyboard_preview_background_dark">#2C2C2C</color>
+    <color name="keyboard_preview_text_dark">#9FA8DA</color>
+    
+    <!-- Couleurs clavier IME - Mode Clair -->
+    <color name="keyboard_background_light">#F5F7FA</color>
+    <color name="keyboard_button_background_light">#FFFFFF</color>
+    <color name="keyboard_button_text_light">#263238</color>
+    <color name="keyboard_preview_background_light">#FFFFFF</color>
+    <color name="keyboard_preview_text_light">#3F51B5</color>
+    
+    <!-- Anciennes couleurs (compatibilité) -->
+    <color name="background_dark">#121212</color>
+    <color name="card_dark">#1E1E1E</color>
+    <color name="accent_blue">#9FA8DA</color>
+    <color name="text_secondary">#8B949E</color>
+</resources>

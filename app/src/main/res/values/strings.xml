@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Coup de Main</string>
+    <string name="welcome_message">Bienvenue dans\nCoup de Main ♟️</string>
+    <string name="subtitle_message">Clavier d\'échecs simplifié\npour notation tactile</string>
+    <string name="fab_description">Nouvelle partie</string>
+    <string name="ime_name">Coup de Main - Échecs</string>
+    <string name="ime_description">Clavier personnalisé pour la notation d\'échecs (SAN)</string>
+    <!-- Button size options -->
+    <string-array name="button_size_entries">
+        <item>Petits boutons (44dp)</item>
+        <item>Taille normale (52dp)</item>
+        <item>Grands boutons (64dp)</item>
+    </string-array>
+    <string-array name="button_size_values">
+        <item>SMALL</item>
+        <item>MEDIUM</item>
+        <item>LARGE</item>
+    </string-array>
+
+    <!-- Layout options -->
+    <string-array name="layout_entries">
+        <item>Disposition 1 (Default)</item>
+        <item>Disposition 2 (Pièces en bas)</item>
+    </string-array>
+    <string-array name="layout_values">
+        <item>DEFAULT</item>
+        <item>PIECES_BOTTOM</item>
+    </string-array>
+
+    <!-- Color options -->
+    <string-array name="color_entries">
+        <item>Système (automatique)</item>
+        <item>Thème sombre</item>
+        <item>Thème clair</item>
+    </string-array>
+    <string-array name="color_values">
+        <item>SYSTEM</item>
+        <item>DARK</item>
+        <item>LIGHT</item>
+    </string-array>
+
+    <!-- Theme options -->
+    <string-array name="theme_entries">
+        <item>Système</item>
+        <item>Thème Clair</item>
+        <item>Thème Sombre</item>
+    </string-array>
+    <string-array name="theme_values">
+        <item>system</item>
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+</resources>

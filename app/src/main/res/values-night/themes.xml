@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme - Mode Sombre -->
+    <style name="Theme.CoupDeMain" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorSecondaryVariant">@color/color_secondary</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Surface colors -->
+        <item name="colorSurface">@color/surface_color</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        
+        <!-- Background colors -->
+        <item name="android:windowBackground">@color/background_primary</item>
+        <item name="backgroundColor">@color/background_primary</item>
+        
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/background_primary</item>
+    </style>
+</resources>

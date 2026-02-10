@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="1dp">
+
+    <!-- Prévisualisation de la notation en cours -->
+    <TextView
+        android:id="@+id/tv_notation_preview"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_marginBottom="1dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:text="Notation"
+        android:fontFamily="monospace"/>
+
+    <!-- Rangée 1: Colonnes a-h -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <Button
+            android:id="@+id/btn_col_a"
+            style="@style/KeyboardButton"
+            android:text="a" />
+
+        <Button
+            android:id="@+id/btn_col_b"
+            style="@style/KeyboardButton"
+            android:text="b" />
+
+        <Button
+            android:id="@+id/btn_col_c"
+            style="@style/KeyboardButton"
+            android:text="c" />
+
+        <Button
+            android:id="@+id/btn_col_d"
+            style="@style/KeyboardButton"
+            android:text="d" />
+
+        <Button
+            android:id="@+id/btn_col_e"
+            style="@style/KeyboardButton"
+            android:text="e" />
+
+        <Button
+            android:id="@+id/btn_col_f"
+            style="@style/KeyboardButton"
+            android:text="f" />
+
+        <Button
+            android:id="@+id/btn_col_g"
+            style="@style/KeyboardButton"
+            android:text="g" />
+
+        <Button
+            android:id="@+id/btn_col_h"
+            style="@style/KeyboardButton"
+            android:text="h" />
+
+    </LinearLayout>
+
+    <!-- Rangée 2: Rangées 1-8 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <Button
+            android:id="@+id/btn_row_1"
+            style="@style/KeyboardButton"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn_row_2"
+            style="@style/KeyboardButton"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btn_row_3"
+            style="@style/KeyboardButton"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btn_row_4"
+            style="@style/KeyboardButton"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btn_row_5"
+            style="@style/KeyboardButton"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btn_row_6"
+            style="@style/KeyboardButton"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btn_row_7"
+            style="@style/KeyboardButton"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn_row_8"
+            style="@style/KeyboardButton"
+            android:text="8" />
+
+    </LinearLayout>
+
+    <!-- Rangée 3: Symboles spéciaux -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <Button
+            android:id="@+id/btn_capture"
+            style="@style/KeyboardButton"
+            android:text="x" />
+
+        <Button
+            android:id="@+id/btn_check"
+            style="@style/KeyboardButton"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btn_checkmate"
+            style="@style/KeyboardButton"
+            android:text="#" />
+
+        <Button
+            android:id="@+id/btn_castle_short"
+            style="@style/KeyboardButton.Wide"
+            android:text="O-O" />
+
+        <Button
+            android:id="@+id/btn_castle_long"
+            style="@style/KeyboardButton.Wide"
+            android:text="O-O-O" />
+
+    </LinearLayout>
+
+    <!-- Rangée 4: Pièces (6 types) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <Button
+            android:id="@+id/btn_rook"
+            style="@style/KeyboardButton"
+            android:text="♜R" />
+
+        <Button
+            android:id="@+id/btn_knight"
+            style="@style/KeyboardButton"
+            android:text="♞C" />
+
+        <Button
+            android:id="@+id/btn_bishop"
+            style="@style/KeyboardButton"
+            android:text="♝F" />
+
+        <Button
+            android:id="@+id/btn_queen"
+            style="@style/KeyboardButton"
+            android:text="♛D" />
+
+        <Button
+            android:id="@+id/btn_king"
+            style="@style/KeyboardButton"
+            android:text="♚K" />
+
+        <Button
+            android:id="@+id/btn_pawn"
+            style="@style/KeyboardButton"
+            android:text="♟P"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- Rangée 5: Contrôles -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_delete"
+            style="@style/KeyboardButton"
+            android:text="⌫" />
+
+        <Button
+            android:id="@+id/btn_space"
+            style="@style/KeyboardButton.ExtraWide"
+            android:text="Espace" />
+
+        <Button
+            android:id="@+id/btn_enter"
+            style="@style/KeyboardButton"
+            android:text="OK" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>
