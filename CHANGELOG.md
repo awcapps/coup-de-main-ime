@@ -10,7 +10,11 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/).
 
 ### 📦 Préparation Open Source - 2026-02-11
 
-#### Fichiers créés pour publication open source ✅
+#### Publication initiale open source ✅
+
+**Repository GitHub créé** : https://github.com/awcapps/coup-de-main-ime
+
+**Fichiers créés pour publication open source** :
 
 **Documentation obligatoire** :
 - `LICENSE` : Licence MIT
@@ -28,10 +32,12 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/).
 - Badges ajoutés (License MIT, Android 21+, Kotlin 1.9.22, Version)
 - Section "À Propos" expliquant la mission du projet
 - Section "Fonctionnalités" avec bullet points
+- **Screenshots intégrés** : 4 screenshots depuis assets/
 - Instructions installation pour utilisateurs ET développeurs
 - Section "Contribution" avec liens vers guides
 - Section "Contact" et "Remerciements"
 - Formatage amélioré avec emojis et structure claire
+- Informations réelles : bkh84, contact@remybaroukh.fr, github.com/awcapps/coup-de-main-ime
 
 **build.gradle.kts sécurisé** :
 - Fallback quand `keystore.properties` absent (utilise debug signing)
