@@ -7,6 +7,10 @@ import android.provider.Settings
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.viewpager2.widget.ViewPager2
 import bkh.apps.coupdemain.R
 import bkh.apps.coupdemain.databinding.ActivityOnboardingBinding
@@ -37,8 +41,22 @@ class OnboardingActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        // Activer edge-to-edge
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        
         binding = ActivityOnboardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        
+        // Gérer les window insets
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, windowInsets ->
+            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updatePadding(
+                top = insets.top,
+                bottom = insets.bottom
+            )
+            WindowInsetsCompat.CONSUMED
+        }
         
         setupViewPager()
         setupButtons()

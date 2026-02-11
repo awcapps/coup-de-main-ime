@@ -3,6 +3,10 @@ package bkh.apps.coupdemain
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import bkh.apps.coupdemain.ui.home.HomeFragment
 import bkh.apps.coupdemain.ui.historique.HistoriqueFragment
@@ -19,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         
         super.onCreate(savedInstanceState)
         
+        // Activer edge-to-edge (l'app va sous les barres système)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        
         // Vérifier si onboarding déjà complété
         if (!OnboardingActivity.isCompleted(this)) {
             startActivity(Intent(this, OnboardingActivity::class.java))
@@ -26,6 +33,21 @@ class MainActivity : AppCompatActivity() {
         }
         
         setContentView(R.layout.activity_main)
+        
+        // Gérer les window insets pour éviter que le contenu passe sous les barres système
+        val rootView = findViewById<androidx.coordinatorlayout.widget.CoordinatorLayout>(R.id.root_layout)
+        ViewCompat.setOnApplyWindowInsetsListener(rootView) { view, windowInsets ->
+            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
+            
+            // Appliquer padding en haut pour la barre de statut
+            view.updatePadding(top = insets.top)
+            
+            // La bottom nav gère le padding en bas
+            val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+            bottomNav.updatePadding(bottom = insets.bottom)
+            
+            WindowInsetsCompat.CONSUMED
+        }
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         
