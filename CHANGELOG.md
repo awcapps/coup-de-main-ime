@@ -8,7 +8,55 @@ Format basé sur [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/).
 
 ## [Unreleased]
 
-### 📦 Préparation Open Source - 2026-02-11
+### � Bug Fix - Affichage Production - 2026-02-11
+
+#### Correction affichage sous barres système ✅
+
+**Problème** :
+En production, l'application dépassait en haut et en bas, se plaçant sous :
+- ❌ Barre de statut (en haut)
+- ❌ Barre de navigation / boutons physiques (en bas)
+- Affectait à la fois l'application principale ET le clavier IME
+
+**Solution** :
+Implémentation de la gestion des **Window Insets** (safe area Android) :
+
+1. **MainActivity.kt** :
+   - Ajout `WindowCompat.setDecorFitsSystemWindows(window, false)` pour edge-to-edge
+   - Ajout `ViewCompat.setOnApplyWindowInsetsListener` pour gérer les insets
+   - Padding dynamique appliqué : `top` pour status bar, `bottom` pour nav bar
+
+2. **OnboardingActivity.kt** :
+   - Même correction pour cohérence
+   - Gestion insets avec padding top + bottom
+
+3. **Layouts clavier IME** :
+   - `keyboard_view.xml` : ajout `android:clipToPadding="false"` sur ScrollView et LinearLayout
+   - `keyboard_view_alt.xml` : même correction pour layout alternatif
+
+4. **activity_main.xml** :
+   - Ajout `android:id="@+id/root_layout"` pour référencer la vue racine
+
+**Résultat** :
+- ✅ L'app respecte maintenant les safe areas système
+- ✅ Le contenu ne passe plus sous les barres
+- ✅ Build testé et validé (113 tasks, BUILD SUCCESSFUL)
+- ✅ Aucune régression
+
+**Fichiers modifiés** :
+```
+app/src/main/java/bkh/apps/coupdemain/MainActivity.kt
+app/src/main/java/bkh/apps/coupdemain/ui/onboarding/OnboardingActivity.kt
+app/src/main/res/layout/activity_main.xml
+app/src/main/res/layout/keyboard_view.xml
+app/src/main/res/layout/keyboard_view_alt.xml
+```
+
+**Commit** : `2dbf8ae` - fix: corriger bug affichage production
+
+---
+
+### �📦 Préparation Open Source - 2026-02-11
 
 #### Publication initiale open source ✅
 
